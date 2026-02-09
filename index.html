@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 3 Day Payout Plan: LucidBlack by Lucid Trading | Vedic Trades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --bg: #ffffff;
+      --bg-secondary: #f7f6f3;
+      --text: #37352f;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9b9a97;
+      --border: #e9e9e7;
+      --highlight: #fff3a3;
+      --callout-yellow: #fef9e6;
+      --callout-blue: #e7f3ff;
+      --callout-green: #e6f6e6;
+      --callout-red: #fce8e8;
+      --callout-purple: #f3e8fd;
+      --code-bg: #f1f1ef;
+      --cover-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f0f0f 100%);
+    }
+    
+    [data-theme="dark"] {
+      --bg: #191919;
+      --bg-secondary: #252525;
+      --text: #e0e0e0;
+      --text-secondary: #a0a0a0;
+      --text-muted: #707070;
+      --border: #333333;
+      --highlight: #4a4520;
+      --callout-yellow: #2d2a1a;
+      --callout-blue: #1a2433;
+      --callout-green: #1a2a1a;
+      --callout-red: #2a1a1a;
+      --callout-purple: #251a33;
+      --code-bg: #2a2a2a;
+      --cover-bg: linear-gradient(135deg, #050505 0%, #0d0d1a 50%, #080808 100%);
+    }
+    
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; transition: background 0.3s, color 0.3s; }
+    .page { max-width: 720px; margin: 0 auto; padding: 80px 24px 120px; }
+    
+    .theme-toggle { position: fixed; top: 20px; right: 20px; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-secondary); border: 1px solid var(--border); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 20px; z-index: 100; transition: all 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .theme-toggle:hover { transform: scale(1.05); }
+    .theme-toggle .sun { display: none; }
+    .theme-toggle .moon { display: block; }
+    [data-theme="dark"] .theme-toggle .sun { display: block; }
+    [data-theme="dark"] .theme-toggle .moon { display: none; }
+    
+    .cover { width: 100vw; margin-left: calc(-50vw + 50%); height: 280px; background: var(--cover-bg); position: relative; overflow: hidden; }
+    .cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(255,215,0,0.08) 0%, transparent 50%), radial-gradient(circle at 70% 50%, rgba(255,255,255,0.03) 0%, transparent 50%); }
+    .cover-pattern { position: absolute; inset: 0; opacity: 0.03; background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 50px 50px; }
+    
+    .icon { font-size: 72px; margin-top: -40px; margin-bottom: 16px; }
+    h1 { font-family: 'Merriweather', Georgia, serif; font-size: 38px; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+    .subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 8px; }
+    .blog-link { font-size: 14px; color: var(--text-muted); margin-bottom: 32px; }
+    .blog-link a { color: var(--text-secondary); font-weight: 500; }
+    
+    .properties { display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 40px; font-size: 14px; }
+    .property { display: flex; align-items: center; gap: 8px; }
+    .property-label { color: var(--text-muted); }
+    .tag { background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 3px; font-size: 12px; font-weight: 500; }
+    [data-theme="dark"] .tag { background: #1a2a1a; color: #6abf6a; }
+    .tag.blue { background: #e3f2fd; color: #1565c0; }
+    [data-theme="dark"] .tag.blue { background: #1a2433; color: #64b5f6; }
+    .tag.black { background: #1a1a1a; color: #ffffff; }
+    [data-theme="dark"] .tag.black { background: #ffffff; color: #1a1a1a; }
+    .tag.orange { background: #fff3e0; color: #e65100; }
+    [data-theme="dark"] .tag.orange { background: #2a1f1a; color: #ffb74d; }
+    .tag.gold { background: #fff8e1; color: #f57f17; }
+    [data-theme="dark"] .tag.gold { background: #2a2510; color: #ffd54f; }
+    .tag.green { background: #e8f5e9; color: #2e7d32; }
+    [data-theme="dark"] .tag.green { background: #1a2a1a; color: #6abf6a; }
+    .tag.red { background: #fce8e8; color: #c62828; }
+    [data-theme="dark"] .tag.red { background: #2a1a1a; color: #ef9a9a; }
+    
+    h2 { font-size: 24px; font-weight: 600; margin: 48px 0 16px; }
+    h3 { font-size: 18px; font-weight: 600; margin: 32px 0 12px; }
+    p { margin-bottom: 16px; }
+    
+    .callout { background: var(--bg-secondary); border-radius: 4px; padding: 16px 16px 16px 48px; position: relative; margin: 24px 0; }
+    .callout-icon { position: absolute; left: 16px; top: 16px; font-size: 18px; }
+    .callout.blue { background: var(--callout-blue); }
+    .callout.green { background: var(--callout-green); }
+    .callout.yellow { background: var(--callout-yellow); }
+    .callout.red { background: var(--callout-red); }
+    .callout.purple { background: var(--callout-purple); }
+    
+    .quote { border-left: 3px solid var(--text); padding-left: 16px; margin: 24px 0; font-style: italic; color: var(--text-secondary); }
+    
+    .table-wrapper { margin: 24px 0; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); }
+    th { background: var(--bg-secondary); font-weight: 600; }
+    tr.highlight-row td { background: rgba(34, 197, 94, 0.08); }
+    [data-theme="dark"] tr.highlight-row td { background: rgba(34, 197, 94, 0.1); }
+    
+    .highlight-num { background: var(--code-bg); padding: 2px 6px; border-radius: 3px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 14px; }
+    hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+    
+    .toggle { margin: 16px 0; }
+    .toggle-header { display: flex; align-items: center; gap: 8px; cursor: pointer; padding: 8px 0; font-weight: 500; }
+    .toggle-header::before { content: '▶'; font-size: 10px; transition: transform 0.2s; }
+    .toggle.open .toggle-header::before { transform: rotate(90deg); }
+    .toggle-content { display: none; padding-left: 24px; }
+    .toggle.open .toggle-content { display: block; }
+    
+    ul, ol { margin: 16px 0; padding-left: 24px; }
+    li { margin: 8px 0; }
+    a { color: var(--text); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+    a:hover { text-decoration-color: var(--text); }
+    .inline-highlight { background: var(--highlight); padding: 0 2px; }
+    
+    kbd { background: var(--code-bg); border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 13px; box-shadow: 0 1px 0 var(--border); }
+
+    .math-block { background: var(--bg-secondary); border-radius: 4px; padding: 20px 24px; margin: 24px 0; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 14px; overflow-x: auto; }
+    .math-block .equation { margin: 8px 0; }
+    .math-block .result { color: #22c55e; font-weight: 600; }
+
+    .roadmap { margin: 32px 0; }
+    .roadmap-item { display: flex; gap: 16px; margin-bottom: 24px; }
+    .roadmap-marker { width: 32px; height: 32px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 14px; flex-shrink: 0; }
+    [data-theme="dark"] .roadmap-marker { background: #e0e0e0; color: #1a1a1a; }
+    .roadmap-content h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .roadmap-content p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+
+    .step-block { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 20px 20px 20px 24px; margin: 20px 0; position: relative; }
+    .step-block::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #1a1a1a; border-radius: 6px 0 0 6px; }
+    [data-theme="dark"] .step-block::before { background: #e0e0e0; }
+    .step-block h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .step-block p { font-size: 14px; color: var(--text-secondary); margin: 0; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #1a1a1a; color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+    [data-theme="dark"] .step-num { background: #e0e0e0; color: #1a1a1a; }
+
+    /* VS Cards */
+    .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+    .vs-card { background: var(--bg-secondary); border-radius: 6px; padding: 20px; border: 1px solid var(--border); }
+    .vs-card.bad { border-color: #ef4444; opacity: 0.7; }
+    .vs-card.good { border-color: #22c55e; box-shadow: 0 0 0 1px #22c55e; }
+    .vs-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .vs-card ul { margin: 0; padding-left: 18px; font-size: 14px; }
+    .vs-card li { margin: 6px 0; color: var(--text-secondary); }
+
+    /* Feature strip */
+    .feature-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+    .feature-item { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 16px 12px; text-align: center; }
+    .feature-item .feat-icon { font-size: 24px; margin-bottom: 6px; }
+    .feature-item .feat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .feature-item .feat-value { font-size: 16px; font-weight: 700; color: var(--text); }
+
+    /* Subtle end banner */
+    .end-banner { margin: 32px 0 0; padding: 14px 20px; border: 1px solid var(--border); border-radius: 4px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--text-muted); }
+    .end-banner strong { color: var(--text); font-weight: 600; }
+    .end-banner-link { font-size: 13px; font-weight: 600; color: var(--text); background: var(--bg-secondary); padding: 6px 14px; border-radius: 4px; border: 1px solid var(--border); text-decoration: none; }
+    .end-banner-link:hover { border-color: var(--text); }
+
+    /* Subtle CTA */
+    .subtle-cta { margin: 40px 0; padding: 20px 0; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-secondary); }
+    .subtle-cta a { color: var(--text); font-weight: 500; }
+
+    @media (max-width: 600px) {
+      .vs-grid { grid-template-columns: 1fr; }
+      .feature-strip { grid-template-columns: repeat(2, 1fr); }
+      h1 { font-size: 28px; }
+      .end-banner { flex-direction: column; align-items: flex-start; }
+    }
+
+    .footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 14px; color: var(--text-muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+  </button>
+
+  <div class="cover">
+    <div class="cover-pattern"></div>
+  </div>
+  
+  <div class="page">
+    <div class="icon">🖤</div>
+    
+    <h1>LucidBlack: The 3 Day Payout Plan</h1>
+    <p class="subtitle">LucidBlack by Lucid Trading — No daily loss limit. No monthly fees. Get paid in 3 days.</p>
+    <p class="blog-link"><a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">Get started with LucidBlack</a> · Vedic Trades</p>
+    
+    <div class="properties">
+      <div class="property">
+        <span class="property-label">Firm</span>
+        <span class="tag black">LucidBlack</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Type</span>
+        <span class="tag blue">Evaluation → Funded</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Profit Split</span>
+        <span class="tag gold">90%</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Platform</span>
+        <span class="tag green">Tradovate</span>
+      </div>
+      <div class="property">
+        <span class="property-label">Daily Loss Limit</span>
+        <span class="tag red">None ✕</span>
+      </div>
+    </div>
+
+    <!-- HOOK -->
+    <p>If you're a scalper or momentum trader, you already know the problem: most prop firm evaluations have a <strong>daily loss limit</strong> that resets your account the moment you have one bad trade in the morning — even if you'd normally recover by lunch.</p>
+
+    <p>LucidBlack doesn't have one. <span class="inline-highlight">No daily loss limit. Not on the evaluation. Not on the funded account.</span> You only have a total max loss, and that's it. Trade your way, recover when you need to, and keep going.</p>
+
+    <p>Combined with a 60% consistency rule that lets you pass the evaluation in as little as 2 days and a one-time fee with zero monthly charges, this is the evaluation that gets out of your way and lets you trade.</p>
+
+    <div class="callout green">
+      <span class="callout-icon">🔥</span>
+      <strong>Check out the plan <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">here</a>!</strong> Make sure to use code <span class="highlight-num">VEDIC</span> for upto 40% OFF.
+    </div>
+
+    <!-- WHO IS THIS FOR -->
+    <h2>Who Is LucidBlack Actually Built For?</h2>
+
+    <p>Not every evaluation suits every trader. LucidBlack is specifically designed for a certain kind of trader — and if this sounds like you, it's probably the best fit available right now.</p>
+
+    <div class="roadmap">
+      <div class="roadmap-item">
+        <div class="roadmap-marker">1</div>
+        <div class="roadmap-content">
+          <h4>Scalpers who take 5–20 trades per session</h4>
+          <p>No daily loss limit means one losing trade doesn't end your day. You can recover. Most DLL-based firms punish high-frequency styles — LucidBlack doesn't.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-marker">2</div>
+        <div class="roadmap-content">
+          <h4>Momentum traders who need room to breathe</h4>
+          <p>If you trade NQ or ES around news/opens and occasionally take a bigger drawdown before catching the move, a DLL kills your strategy. Here you just need to stay above the total max loss.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-marker">3</div>
+        <div class="roadmap-content">
+          <h4>Confident traders who want to pass fast</h4>
+          <p>The 60% consistency rule on the eval means your best day can be up to 60% of your total profit. Two big green days and you're funded — within 5 to 30 minutes of hitting your target.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-marker">4</div>
+        <div class="roadmap-content">
+          <h4>Traders tired of monthly rebilling</h4>
+          <p>LucidBlack is a one-time fee. No subscription, no recurring charges. Take as long as you need to pass — the account doesn't expire.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY NO DLL MATTERS -->
+    <h2>Why "No Daily Loss Limit" Changes Everything</h2>
+
+    <p>Let's be real about what happens at most prop firms:</p>
+
+    <div class="vs-grid">
+      <div class="vs-card bad">
+        <h4>❌ Typical Prop Firm</h4>
+        <ul>
+          <li>$50K account, $1,000 DLL</li>
+          <li>You lose $900 in the first hour</li>
+          <li>Market reverses — perfect setup</li>
+          <li>You can't trade. DLL hit.</li>
+          <li>Day wasted. Maybe the whole eval.</li>
+        </ul>
+      </div>
+      <div class="vs-card good">
+        <h4>✅ LucidBlack</h4>
+        <ul>
+          <li>$50K account, no DLL</li>
+          <li>You lose $900 in the first hour</li>
+          <li>Market reverses — perfect setup</li>
+          <li>You take the trade. You recover.</li>
+          <li>End the day green. Keep going.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The only thing that matters in LucidBlack is your <strong>total max loss</strong> — the overall drawdown from your starting balance. As long as you don't breach that, you can trade however you want, whenever you want.</p>
+
+    <div class="callout yellow">
+      <span class="callout-icon">💡</span>
+      This doesn't mean you should be reckless. It means the rules <strong>match how real traders actually trade</strong> — some days start rough, and the ability to recover is what separates profitable traders from the ones who blow accounts on arbitrary intraday limits.
+    </div>
+
+    <!-- ACCOUNT BREAKDOWN -->
+    <h2>Account Breakdown: 25K vs 50K</h2>
+
+    <p>LucidBlack offers three sizes but the <strong>$25K and $50K</strong> are the sweet spot for scalpers. Here's the full picture:</p>
+
+    <h3>📋 Evaluation Phase</h3>
+
+    <div class="feature-strip">
+      <div class="feature-item">
+        <div class="feat-icon">🚫</div>
+        <div class="feat-label">Daily Loss Limit</div>
+        <div class="feat-value">None</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">📊</div>
+        <div class="feat-label">Consistency</div>
+        <div class="feat-value">60%</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">💰</div>
+        <div class="feat-label">Activation Fee</div>
+        <div class="feat-value">$0</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">🔄</div>
+        <div class="feat-label">Monthly Rebill</div>
+        <div class="feat-value">None</div>
+      </div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Account</th>
+          <th>Profit Target</th>
+          <th>Max Loss</th>
+          <th>Max Contracts</th>
+        </tr>
+        <tr>
+          <td><strong>$25,000</strong></td>
+          <td>$1,250</td>
+          <td>$1,000</td>
+          <td>2 mini / 20 micros</td>
+        </tr>
+        <tr class="highlight-row">
+          <td><strong>$50,000</strong> ⭐</td>
+          <td>$3,000</td>
+          <td>$2,000</td>
+          <td>4 mini / 40 micros</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout blue">
+      <span class="callout-icon">🎯</span>
+      <strong>Why the $50K is the best value:</strong> Double the max loss ($2,000 vs $1,000) gives you significantly more room to trade aggressively. The profit target only goes from $1,250 → $3,000, which is very achievable with 4 mini contracts. More cushion, more opportunity.
+    </div>
+
+    <h3>💼 Funded Phase</h3>
+
+    <p>Once you hit the profit target, your account activates within <strong>5–30 minutes</strong>. No activation fee. No waiting period. You go straight to funded.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Account</th>
+          <th>Max Loss</th>
+          <th>Consistency</th>
+          <th>Payout Profit Goal</th>
+          <th>Scaling Plan</th>
+        </tr>
+        <tr>
+          <td><strong>$25,000</strong></td>
+          <td>$1,000</td>
+          <td>40%</td>
+          <td>$1,500</td>
+          <td>✅ Yes</td>
+        </tr>
+        <tr class="highlight-row">
+          <td><strong>$50,000</strong> ⭐</td>
+          <td>$2,000</td>
+          <td>40%</td>
+          <td>$3,000</td>
+          <td>✅ Yes</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>Key things about the funded account:</p>
+    <ul>
+      <li><strong>Still no daily loss limit</strong> — same freedom as the eval</li>
+      <li><strong>No minimum trading days</strong> — trade when you want</li>
+      <li><strong>No buffer balance required</strong> — you can withdraw everything above the profit goal</li>
+      <li><strong>90% profit split</strong> from day one</li>
+      <li><strong>Payouts processed within 2 business days</strong></li>
+    </ul>
+
+    <!-- PASS IN 2 DAYS -->
+    <h2>How to Pass the Eval in 2 Days</h2>
+
+    <p>The 60% consistency rule on the evaluation means your single best day can account for up to 60% of your total profit. This is <em>extremely</em> relaxed compared to most firms (which cap at 30–40%). Here's what that looks like in practice:</p>
+
+    <h3>$25K Account — Pass in 2 Days</h3>
+    <div class="math-block">
+      <div class="equation">Profit Target = $1,250</div>
+      <div class="equation">60% consistency → best day can be up to $750</div>
+      <div class="equation">Day 1: +$750 (60% of total)</div>
+      <div class="equation">Day 2: +$500 (40% of total)</div>
+      <div class="result">✅ Target hit. Account funded in 5–30 min.</div>
+    </div>
+
+    <h3>$50K Account — Pass in 2 Days</h3>
+    <div class="math-block">
+      <div class="equation">Profit Target = $3,000</div>
+      <div class="equation">60% consistency → best day can be up to $1,800</div>
+      <div class="equation">Day 1: +$1,800 (60% of total)</div>
+      <div class="equation">Day 2: +$1,200 (40% of total)</div>
+      <div class="result">✅ Target hit. Account funded in 5–30 min.</div>
+    </div>
+
+    <div class="callout yellow">
+      <span class="callout-icon">💡</span>
+      <strong>You don't have to pass in 2 days.</strong> There's no time limit and no monthly fee. The point is that the rules <em>allow</em> it — so if you're having great sessions, you're not being held back by arbitrary minimum day requirements or 30% consistency caps.
+    </div>
+
+    <!-- PAYOUT STRUCTURE -->
+    <h2>Payout Structure: How You Actually Get Paid</h2>
+
+    <p>Once funded, you need to hit a Profit Goal each payout cycle to request a withdrawal. Here's the breakdown:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Account</th>
+          <th>Payout Profit Goal</th>
+          <th>Standard Max Payout</th>
+          <th>Bonus Max Payout</th>
+        </tr>
+        <tr>
+          <td><strong>$25,000</strong></td>
+          <td>$1,500</td>
+          <td>$750</td>
+          <td>+$750 (payouts 2–4)</td>
+        </tr>
+        <tr class="highlight-row">
+          <td><strong>$50,000</strong></td>
+          <td>$3,000</td>
+          <td>$1,500</td>
+          <td>+$1,500 (payouts 2–4)</td>
+        </tr>
+      </table>
+    </div>
+
+    <h3>Bonus Payouts Explained</h3>
+
+    <p>Starting from your 2nd payout, you can earn a <strong>Bonus Payout</strong> by hitting a higher target. This effectively doubles your withdrawal for that cycle:</p>
+
+    <div class="math-block">
+      <div class="equation">$50K Account — Bonus Payout Example:</div>
+      <div class="equation">Standard Profit Goal: $3,000 → payout up to $1,500</div>
+      <div class="equation">Bonus Profit Goal: $5,000 → additional $1,500</div>
+      <div class="result">Total possible payout: $3,000 per cycle</div>
+    </div>
+
+    <p>There's no extra fee for the bonus — it's automatically available from your 2nd payout onwards.</p>
+
+    <div class="callout blue">
+      <span class="callout-icon">📌</span>
+      <strong>Key payout details:</strong> Minimum payout is $500. No fixed payout window — request any day after hitting the goal. No buffer balance required. Funds disbursed within 2 business days.
+    </div>
+
+    <!-- REALISTIC PLAYBOOK -->
+    <h2>Realistic Playbook: $50K Account, Week by Week</h2>
+
+    <p>Here's what a disciplined scalper's journey looks like on a $50K LucidBlack account:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Phase</th>
+          <th>Goal</th>
+          <th>Timeline</th>
+          <th>Key Metric</th>
+        </tr>
+        <tr>
+          <td><strong>Evaluation</strong></td>
+          <td>Hit $3,000 profit target</td>
+          <td>2–5 trading days</td>
+          <td>Stay above -$2,000 max loss</td>
+        </tr>
+        <tr>
+          <td><strong>Activation</strong></td>
+          <td>Account goes live</td>
+          <td>5–30 minutes</td>
+          <td>$0 activation fee</td>
+        </tr>
+        <tr>
+          <td><strong>Funded — Payout 1</strong></td>
+          <td>Hit $3,000 profit goal</td>
+          <td>1–2 weeks</td>
+          <td>Request up to $1,500 (90% split)</td>
+        </tr>
+        <tr>
+          <td><strong>Funded — Payout 2+</strong></td>
+          <td>Hit $5,000 for bonus</td>
+          <td>2–3 weeks</td>
+          <td>Request up to $3,000 per cycle</td>
+        </tr>
+      </table>
+    </div>
+
+    <p>At steady state with the bonus, a $50K account can pull <span class="highlight-num">$3,000 per payout cycle</span> at a 90% split. That's real money for a scalper working a few hours a day.</p>
+
+    <!-- WHY NOT OTHER FIRMS -->
+    <h2>LucidBlack vs Other Evaluations</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>LucidBlack</th>
+          <th>Most Prop Firms</th>
+        </tr>
+        <tr>
+          <td><strong>Daily Loss Limit</strong></td>
+          <td><span class="tag green">None</span></td>
+          <td><span class="tag red">$500–$1,000</span></td>
+        </tr>
+        <tr>
+          <td><strong>Monthly Fees</strong></td>
+          <td><span class="tag green">One-time, no rebill</span></td>
+          <td><span class="tag red">Monthly subscription</span></td>
+        </tr>
+        <tr>
+          <td><strong>Eval Consistency</strong></td>
+          <td><span class="tag green">60%</span></td>
+          <td><span class="tag orange">30–40%</span></td>
+        </tr>
+        <tr>
+          <td><strong>Activation Time</strong></td>
+          <td><span class="tag green">5–30 minutes</span></td>
+          <td><span class="tag orange">24–72 hours</span></td>
+        </tr>
+        <tr>
+          <td><strong>Activation Fee</strong></td>
+          <td><span class="tag green">$0</span></td>
+          <td><span class="tag red">$100–$200+</span></td>
+        </tr>
+        <tr>
+          <td><strong>Min Trading Days (Funded)</strong></td>
+          <td><span class="tag green">None</span></td>
+          <td><span class="tag orange">5–10 days</span></td>
+        </tr>
+        <tr>
+          <td><strong>Buffer Balance Required</strong></td>
+          <td><span class="tag green">None</span></td>
+          <td><span class="tag red">$100–$500</span></td>
+        </tr>
+        <tr>
+          <td><strong>Profit Split</strong></td>
+          <td><span class="tag green">90%</span></td>
+          <td><span class="tag orange">80–90%</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="quote">
+      "The best prop firm is the one that doesn't fight your trading style. If you scalp or trade momentum, the daily loss limit is the thing that kills you. LucidBlack just removes it."
+    </div>
+
+    <!-- RISK MANAGEMENT -->
+    <h2>Risk Management on LucidBlack</h2>
+
+    <p>No daily loss limit doesn't mean no risk management. It means <em>you</em> manage the risk, not an arbitrary rule. Here's how to think about it:</p>
+
+    <div class="step-block">
+      <h4><span class="step-num">1</span> Set your own daily stop</h4>
+      <p>Just because there's no DLL doesn't mean you should risk your whole max loss in one session. Set a personal daily max of 30–40% of your total max loss. For the $50K account, that's $600–$800 per day.</p>
+    </div>
+
+    <div class="step-block">
+      <h4><span class="step-num">2</span> Size appropriately</h4>
+      <p>With 4 mini contracts (or 40 micros) on the $50K, you have plenty of sizing flexibility. Start with 1–2 contracts per trade. Scale up only when you're green for the day.</p>
+    </div>
+
+    <div class="step-block">
+      <h4><span class="step-num">3</span> Use bracket orders</h4>
+      <p>Always have a stop loss set before you enter. On Tradovate, set up bracket orders with automatic TP and SL. See our <a href="#">Tradovate setup guide</a> for how.</p>
+    </div>
+
+    <div class="step-block">
+      <h4><span class="step-num">4</span> Know when to walk away</h4>
+      <p>The freedom to keep trading after a loss is powerful — but so is the discipline to stop. If you've hit your personal daily limit, close the platform. The account will be there tomorrow.</p>
+    </div>
+
+    <div class="callout red">
+      <span class="callout-icon">⚠️</span>
+      <strong>The max loss is absolute.</strong> On the $50K account, if your balance drops to $48,000 ($2,000 below starting balance), the account is done. No DLL means more freedom per day, but the overall safety net is the same. Respect it.
+    </div>
+
+    <!-- FUNDED ACCOUNT DETAILS -->
+    <h2>What Happens After You're Funded</h2>
+
+    <p>Once you pass the evaluation, here's what changes — and what stays the same:</p>
+
+    <div class="vs-grid">
+      <div class="vs-card">
+        <h4>🔄 What stays the same</h4>
+        <ul>
+          <li>No daily loss limit</li>
+          <li>Same max loss amounts</li>
+          <li>Same contract limits</li>
+          <li>Same Tradovate platform</li>
+        </ul>
+      </div>
+      <div class="vs-card">
+        <h4>✨ What's new</h4>
+        <ul>
+          <li>90% profit split on payouts</li>
+          <li>No minimum trading days</li>
+          <li>Scaling plan available</li>
+          <li>Bonus payouts from payout 2+</li>
+          <li>Payout in as little as 3 days</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The consistency rule tightens from 60% to 40% on funded, which means your best day can be no more than 40% of your total profit for that payout cycle. This is still very manageable — it just means you need at least 3 profitable days to build a payout, rather than 2.</p>
+
+    <hr>
+
+    <h2>Quick Summary: Why LucidBlack</h2>
+
+    <div class="feature-strip">
+      <div class="feature-item">
+        <div class="feat-icon">🚫</div>
+        <div class="feat-label">No DLL</div>
+        <div class="feat-value">Ever</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">⏱️</div>
+        <div class="feat-label">Pass In</div>
+        <div class="feat-value">2 Days</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">💸</div>
+        <div class="feat-label">Monthly Fee</div>
+        <div class="feat-value">$0</div>
+      </div>
+      <div class="feature-item">
+        <div class="feat-icon">🏦</div>
+        <div class="feat-label">Profit Split</div>
+        <div class="feat-value">90%</div>
+      </div>
+    </div>
+
+    <div class="subtle-cta">
+      Ready to start? <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank">Sign up for LucidBlack here</a> — the evaluation with no daily loss limit, no monthly fees, and a 90% profit split.
+    </div>
+
+    <hr>
+
+    <div class="toggle" onclick="this.classList.toggle('open')">
+      <div class="toggle-header">Full Evaluation Rules Reference</div>
+      <div class="toggle-content">
+        <ul>
+          <li><strong>Profit Target:</strong> $1,250 (25K) / $3,000 (50K)</li>
+          <li><strong>Max Loss:</strong> $1,000 (25K) / $2,000 (50K)</li>
+          <li><strong>Daily Loss Limit:</strong> None</li>
+          <li><strong>Consistency:</strong> 60% — best day ≤ 60% of total profit</li>
+          <li><strong>Max Contracts:</strong> 2 mini / 20 micro (25K) — 4 mini / 40 micro (50K)</li>
+          <li><strong>Time Limit:</strong> None — one-time fee, no monthly rebill</li>
+          <li><strong>Activation Fee:</strong> $0</li>
+          <li><strong>Activation Time:</strong> 5–30 minutes after hitting target</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="toggle" onclick="this.classList.toggle('open')">
+      <div class="toggle-header">Full Funded Account Rules Reference</div>
+      <div class="toggle-content">
+        <ul>
+          <li><strong>Max Loss:</strong> $1,000 (25K) / $2,000 (50K)</li>
+          <li><strong>Daily Loss Limit:</strong> None</li>
+          <li><strong>Consistency:</strong> 40% — best day ≤ 40% of total profit</li>
+          <li><strong>Min Trading Days:</strong> None</li>
+          <li><strong>Profit Split:</strong> 90/10</li>
+          <li><strong>Payout Profit Goal:</strong> $1,500 (25K) / $3,000 (50K)</li>
+          <li><strong>Bonus Profit Goal:</strong> $2,500 (25K) / $5,000 (50K) — available payout 2–4</li>
+          <li><strong>Standard Max Payout:</strong> $750 (25K) / $1,500 (50K)</li>
+          <li><strong>Bonus Max Payout:</strong> +$750 (25K) / +$1,500 (50K)</li>
+          <li><strong>Min Payout:</strong> $500</li>
+          <li><strong>Buffer Balance:</strong> None required</li>
+          <li><strong>Payout Processing:</strong> Within 2 business days</li>
+          <li><strong>Scaling Plan:</strong> Available</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="end-banner">
+      <span><strong>LucidBlack</strong> — No DLL, no monthly fees, 90% split</span>
+      <a href="https://lucidtrading.com/ref/vedictrades/" target="_blank" class="end-banner-link">Get Started →</a>
+    </div>
+
+    <div class="footer">
+      <p>Written by Vedic Trades • Prop Firm Guides</p>
+    </div>
+  </div>
+  
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) { document.documentElement.setAttribute('data-theme', savedTheme); }
+    else if (window.matchMedia('(prefers-color-scheme: dark)').matches) { document.documentElement.setAttribute('data-theme', 'dark'); }
+  </script>
+</body>
+</html>
